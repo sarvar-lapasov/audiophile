@@ -1,0 +1,13 @@
+.img-content {
+    margin-top: 16rem;
+    display: flex;
+    justify-content: space-between;
+    .content-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__img {
+            display: block;
+        }
+    }
+}

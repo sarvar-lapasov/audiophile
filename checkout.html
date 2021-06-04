@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>audiophile</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <section class="page-header">
+        <div class="container">
+            <header class="header u-border-bottom">
+                <div class="header-main">
+                    <a href="index.html" class="logo">
+                        <img class="logo__img" src="./images/logo.svg" width="143" height="25" alt="">
+                    </a>
+                    <nav class="nav header-nav">
+                        <ul class="list header-list">
+                            <li class="list__item header-list__item">
+                                <a href="index.html" class="list__link header-list__link">HOME</a>
+                            </li>
+                            <li class="list__item header-list__item">
+                                <a href="headphones.html" class="list__link header-list__link">HEADPHONES</a>
+                            </li>
+                            <li class="list__item header-list__item">
+                                <a href="speakers.html" class="list__link header-list__link">SPEAKERS</a>
+                            </li>
+                            <li class="list__item header-list__item">
+                                <a href="earphones.html" class="list__link header-list__link">EARPHONES</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                    <button class="btn-btn add-t-c" type="button"></button>
+
+
+                </div>
+
+            </header>
+        </div>
+
+    </section>
+    <main class="main main-2">
+
+        <!-- modal cart start -->
+        <div class="modal">
+            <div class="cart-modal js-cart">
+                <div class="u-space-between">
+                    <h5 class="cart-modal__heading">cart (3)</h5>
+                    <span class="cart-modal__remove">Remove all</span>
+                </div>
+                <div class="cart-products">
+                    <div class="cart-product u-space-between">
+                        <div class="product-info">
+                            <div class="product-info__img">
+                                <img src=".//images/headphone/1.png" width="36" height="40" alt="">
+                            </div>
+                            <div class="u-direction-column">
+                                <p class="product-info__title">XX99 MK II</p>
+                                <span class="product-info__price">$ 2,999</span>
+                            </div>
+                        </div>
+                        <div class="quantity quantity-product">
+                            <button class=" btn-quantity minus-btn disabled" type="button">-</button>
+                            <input type="text" class="quantity__input" name="" id="quantity" value="0">
+                            <button class="btn-quantity plus-btn" type="button">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-product u-space-between">
+                        <div class="product-info">
+                            <div class="product-info__img">
+                                <img src=".//images/headphone/3.png" width="38" height="40" alt="">
+                            </div>
+                            <div class="u-direction-column">
+                                <p class="product-info__title">XX99 MK II</p>
+                                <span class="product-info__price">$ 2,999</span>
+                            </div>
+                        </div>
+                        <div class="quantity quantity-product">
+                            <button class=" btn-quantity minus-btn disabled" type="button">-</button>
+                            <input type="text" class="quantity__input" name="" id="quantity" value="0">
+                            <button class="btn-quantity plus-btn" type="button">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-product u-space-between">
+                        <div class="product-info">
+                            <div class="product-info__img">
+                                <img src=".//images/earphones/1.png" width="46" height="42" alt="">
+                            </div>
+                            <div class="u-direction-column">
+                                <p class="product-info__title">XX99 MK II</p>
+                                <span class="product-info__price">$ 2,999</span>
+                            </div>
+                        </div>
+                        <div class="quantity quantity-product">
+                            <button class=" btn-quantity minus-btn disabled" type="button">-</button>
+                            <input type="text" class="quantity__input" name="" id="quantity" value="0">
+                            <button class="btn-quantity plus-btn" type="button">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-product-price u-space-between">
+                    <span class="product-total">TOTAL</span>
+                    <span class="price total-price">$ 5,396</span>
+                </div>
+                <a class="btn btn-checkout u-text-center" href="checkout.html">checkout</a>
+            </div>
+
+        </div>
+        <!-- modal cart end-->
+
+
+        <!-- order modal start -->
+        <div class="modal">
+            <div class="order-modal">
+                <img src="./images/order.png" alt="" width="64" height="64" class="order-img">
+            </div>
+        </div>
+        <!-- order modal end -->
+        <div class="container">
+            <div class="go-back">
+                <a class="go-back__link" href="#">Go back</a>
+            </div>
+            <div class="u-space-between">
+                <div class="checkout">
+                    <h4 class="features-heading">CHECKOUT</h4>
+                    <form class="form" action="" method="post">
+                        <span class="checkout-title">Billing Details</span>
+
+                        <div class="row">
+                            <div class="col-50">
+                                <label class="label" for="fname">Full Name</label>
+                                <input class="input" type="text" id="fname" name="firstname" placeholder="Alexei Ward">
+                            </div>
+                            <div class="col-50">
+                                <label class="label" for="email"> Email</label>
+                                <input class="input" type="email" id="email" name="email" placeholder="alexei@mail.com">
+                            </div>
+                            <div class="col-50">
+                                <label class="label" for="tel"> Address</label>
+                                <input class="input" type="tel" id="tel" name="tel" placeholder="+1 202-555-0136">
+                            </div>
+                        </div>
+                        <span class="checkout-title">shipping info</span>
+
+                        <div class="row">
+                            <div class="col-50">
+                                <label class="label " for="adr"> Address</label>
+                                <input class="input input-100" type="text" id="adr" name="address" placeholder="1137 Williams Avenue">
+                            </div>
+                            <div class="col-50">
+                                <label class="label" for="code">ZIP Code</label>
+                                <input class="input" type="text" id="code" name="code" placeholder="10001">
+                            </div>
+                            <div class="col-50">
+                                <label class="label" for="city">City</label>
+                                <input class="input" type="text" id="city" name="city" placeholder="New York">
+                            </div>
+                            <div class="col-50">
+                                <label class="label" for="country">Country</label>
+                                <input class="input" type="text" id="country" name="country" placeholder="United States">
+                            </div>
+
+
+                        </div>
+                        <span class="checkout-title">payment details</span>
+                        <div class="row">
+                            <span class="payment-method">Payment Method</span>
+                            <div class=" u-ml-auto">
+
+                                <label class="label-radio" for="e-money" data-radio="radio_1">e-Money
+                                    <input id="e-money" class="input-radio" checked name="radio" type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="label-radio" for="delivery" data-radio="radio_2">Cash on Delivery
+                                    <input id="delivery" class="input-radio" name="radio" type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="content">
+                            <div class="radio_content radio_1">
+                                <div class="row u-margin-none">
+                                    <div class="col-50">
+                                        <label class="label" for="code">e-Money Number</label>
+                                        <input class="input" type="text" id="code" name="code" placeholder="238521993">
+                                    </div>
+                                    <div class="col-50">
+                                        <label class="label" for="code">e-Money PIN</label>
+                                        <input class="input" type="text" id="code" name="code" placeholder="238521993">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="radio_content radio_2">
+                                <div class="u-align-items-center">
+                                    <img src="./images/delivery_text__img.png" alt="" width="48" height="48" class="delivery-input__img">
+                                    <p class="secondary-text delivery-text black-text">The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="summary">
+                    <h5 class="cart-modal__heading">summary</h5>
+                    <div class="cart-products">
+                        <div class="cart-product u-space-between">
+                            <div class="product-info">
+                                <div class="product-info__img">
+                                    <img src=".//images/headphone/1.png" width="36" height="40" alt="">
+                                </div>
+                                <div class="u-direction-column">
+                                    <p class="product-info__title">XX99 MK II</p>
+                                    <span class="product-info__price">$ 2,999</span>
+                                </div>
+                            </div>
+                            <p class="product-info__title u-opacity-50">x1</p>
+                        </div>
+                        <div class="cart-product u-space-between">
+                            <div class="product-info">
+                                <div class="product-info__img">
+                                    <img src=".//images/headphone/3.png" width="38" height="40" alt="">
+                                </div>
+                                <div class="u-direction-column">
+                                    <p class="product-info__title">XX99 MK II</p>
+                                    <span class="product-info__price">$ 899</span>
+                                </div>
+                            </div>
+                            <p class="product-info__title u-opacity-50">x2</p>
+                        </div>
+                        <div class="cart-product u-space-between">
+                            <div class="product-info">
+                                <div class="product-info__img">
+                                    <img src=".//images/earphones/1.png" width="46" height="42" alt="">
+                                </div>
+                                <div class="u-direction-column">
+                                    <p class="product-info__title">XX99 MK II</p>
+                                    <span class="product-info__price">$ 599</span>
+                                </div>
+                            </div>
+                            <p class="product-info__title u-opacity-50">x1</p>
+                        </div>
+                    </div>
+                    <div class="total cart-product-price u">
+                        <span class="product-total">TOTAL</span>
+                        <span class="price total-price u-margin-none">$ 5,396</span>
+                    </div>
+                    <div class="total cart-product-price u">
+                        <span class="product-total">SHIPPING</span>
+                        <span class="price total-price u-margin-none">$ 50</span>
+                    </div>
+                    <div class="total cart-product-price u">
+                        <span class="product-total">VAT (INCLUDED)</span>
+                        <span class="price total-price u-margin-none">$ 1,079</span>
+                    </div>
+                    <div class="total grand-total cart-product-price u">
+                        <span class="product-total">GRAND TOTAL</span>
+                        <span class="price total-price u-margin-none">$ 5,446</span>
+                    </div>
+                    <button type="button" class="btn u-text-center btn-checkout" href="#">CONTINUE & PAY</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__top">
+                <a href="index.html" class="logo">
+                    <img class="logo__img" src="./images/logo.svg" width="143" height="25" alt="">
+                </a>
+                <nav class="nav footer-nav">
+                    <ul class="list footer-list">
+                        <li class="list__item footer-list__item">
+                            <a href="index.html" class="list__link footer-list__link">HOME</a>
+                        </li>
+                        <li class="list__item footer-list__item">
+                            <a href="headphones.html" class="list__link footer-list__link">HEADPHONES</a>
+                        </li>
+                        <li class="list__item footer-list__item">
+                            <a href="speakers.html" class="list__link footer-list__link">SPEAKERS</a>
+                        </li>
+                        <li class="list__item footer-list__item">
+                            <a href="earphones.html" class="list__link footer-list__link">EARPHONES</a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer-content">
+                    <p class="secondary-text footer-content__text">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open
+                        7 days a week.</p>
+                    <span class="footer-content__span">Copyright 2021. All Rights Reserved</span>
+                </div>
+                <div class="social">
+                    <ul class=" list social-items u-ml-auto">
+                        <li class=" list__item social-item">
+                            <a href="#" class="list__link social-item__link">
+                                <!-- <img src="./images/facebook.svg" alt=""> -->
+                                <svg class="icon" width="24" height="24">
+                                    <use xlink:href="./images/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class=" list__item social-item">
+                            <a href="#" class="list__link social-item__link">
+                                <!-- <img src="./images/twitter.svg" alt=""> -->
+                                <svg class="icon" width="24" height="24">
+                                    <use xlink:href="./images/sprite.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class=" list__item social-item">
+                            <a href="#" class="list__link social-item__link">
+                                <!-- <img src="./images/instagram.svg" alt=""> -->
+                                <svg class="icon" width="24" height="24">
+                                    <use xlink:href="./images/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

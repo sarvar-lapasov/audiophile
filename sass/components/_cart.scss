@@ -1,0 +1,58 @@
+.shop-cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rem;
+    .cart {
+        display: block;
+        &-link {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            text-align: center;
+            width: 35rem;
+            background-color: $color-gray-f1;
+            position: relative;
+            padding: 11.6rem 0 3rem 0;
+            transition: all 0.2s ease-in;
+            &__img {
+                position: absolute;
+                transform: translateX(50%);
+                right: 50%;
+                bottom: 13rem;
+            }
+            &__title {
+                font-weight: bold;
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                text-align: center;
+                letter-spacing: 1.28571px;
+                text-transform: uppercase;
+                color: $color-black;
+            }
+            &__text {
+                margin-top: 1.5rem;
+                font-weight: bold;
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $color-black;
+                mix-blend-mode: normal;
+                opacity: 0.5;
+                &::after {
+                    @include baElements(5px, 10px) {
+                        background-image: url(../../images/shop/arrow.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        margin-left: 1.3rem;
+                    }
+                }
+            }
+            &:hover .cart-link__text {
+                color: $color-orange;
+                opacity: 1;
+            }
+        }
+    }
+}

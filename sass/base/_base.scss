@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    width: 100vw;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 114rem;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-decoration: none;
+}
+
+.page-header {
+    position: relative;
+    background-color: $color-black;
+    .page__info {
+        margin-top: 9.6rem;
+        padding: 9.7rem 0;
+        text-align: center;
+        // border-top: 1px solid $color-white;
+    }
+}
+
+hr {
+    margin-top: 9.6rem;
+    padding: 0 16.5rem;
+    display: block;
+    max-width: 114rem;
+    height: 1px;
+    background: $color-white;
+    mix-blend-mode: normal;
+    opacity: 0.2;
+    text-align: center;
+}
+
+.main {
+    // position: relative;
+    padding-top: calc(8rem + 9.6rem);
+    padding-bottom: 16rem;
+    display: block;
+    &.main-2 {
+        background-color: $color-gray-f2;
+        padding-bottom: 14rem;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    margin-top: 1.6rem;
+    .col-50 {
+        margin-bottom: 2.4rem;
+    }
+}

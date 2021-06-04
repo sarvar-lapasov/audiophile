@@ -1,0 +1,24 @@
+.products {
+    margin-top: 16rem;
+    display: block;
+    text-align: center;
+    .product-cards {
+        margin-top: 6.4rem;
+        display: flex;
+        justify-content: space-between;
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__img {
+                width: 35rem;
+                min-height: 31.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-gray-f1;
+                border-radius: 8px;
+            }
+        }
+    }
+}

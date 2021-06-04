@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/vendors/bootstrap.scss"
+    ],
+    "names": [],
+    "file": "bootstrap.css"
+}

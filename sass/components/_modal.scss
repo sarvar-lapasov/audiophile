@@ -1,0 +1,78 @@
+.modal {
+    display: none;
+    top: 9.6rem;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    // padding: 0 11.5rem;
+    z-index: 1;
+    transition: all 0.5s ease-in;
+    .cart-modal {
+        // display: none;
+        position: absolute;
+        padding: 3.1rem;
+        width: 37.7rem;
+        top: 3.2rem;
+        right: 0;
+        background-color: $color-white;
+        z-index: 999;
+        border-radius: 8px;
+        transition: all 0.2s ease-in;
+        .cart-products {
+            margin-top: 3.2rem;
+            .cart-product {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2.4rem;
+                .product-info {
+                    display: flex;
+                    align-items: center;
+                    &__img {
+                        border-radius: 8px;
+                        width: 6.4rem;
+                        height: 6.4rem;
+                        background-color: $color-gray-f1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 1.6rem;
+                    }
+                    &__title {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        line-height: 2.5rem;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+        .cart-product-price {
+            margin-top: 3.2rem;
+            margin-bottom: 2.4rem;
+            align-items: center;
+            .total-price {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.change {
+    position: fixed;
+    top: 9.6rem;
+    left: 0;
+    display: block;
+    transition: all 0.5s ease-in;
+    .cart-modal {
+        position: absolute;
+        padding: 3.1rem;
+        width: 37.7rem;
+        top: 3.2rem;
+        right: -7.5rem;
+        transform: translateX(-50%);
+        transform: translateX(-50%);
+        transition: all 0.5s ease-in;
+    }
+}

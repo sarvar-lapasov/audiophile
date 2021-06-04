@@ -1,0 +1,39 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 9.6rem;
+    padding: 3.6rem 0;
+    z-index: 1;
+    width: 100%;
+    background-color: $color-black;
+    .logo {
+        &__Img {
+            // margin-left: 1rem;
+        }
+    }
+    .header-nav {
+        text-align: center;
+        margin-right: 12rem;
+    }
+    &-list {
+        display: flex;
+        &__item {
+            list-style: none;
+        }
+        &__link {
+            text-decoration: none;
+        }
+    }
+    .header-main {
+        // padding: 0 1.5rem;
+        position: relative;
+        max-width: 111.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

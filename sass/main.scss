@@ -1,33 +1,37 @@
 // Abstracts
-@import './abstracts/variables';
-@import './abstracts/utils';
-@import './abstracts/mixins';
+@import "./abstracts/variables";
+@import "./abstracts/utils";
+@import "./abstracts/mixins";
 // Base
-@import './base/base';
-@import './base/typography';
-@import './base/normalize';
-
+@import "./base/base";
+@import "./base/typography";
+@import "./base/normalize";
 // COMPONENTS
-@import './components/btn';
-@import './components/card';
-@import './components/dropdown';
-
+@import "./components/btn";
+@import "./components/card";
+@import "./components/cart";
+@import "./components/dropdown";
+@import "./components/go_back";
+@import "./components/features";
+@import "./components/img-content";
+@import "./components/product";
+@import "./components/quantity";
+@import "./components/modal";
 // LAYOUT
-@import './layout/header';
-@import './layout/nav';
-@import './layout/footer';
-@import './layout/forms';
-@import './layout/list';
-
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/footer";
+@import "./layout/forms";
+@import "./layout/list";
+@import "./layout/checkout";
 // PAGES
-@import './pages/home';
-@import './pages/about';
-@import './pages/contact';
-
+@import "./pages/home";
+@import "./pages/headphones";
+@import "./pages/speakers";
+@import "./pages/earphones";
 // THEMES
-@import './themes/theme';
-@import './themes/dark';
-
+@import "./themes/theme";
+@import "./themes/dark";
 // VENDORS
-@import './vendors/bootstrap';
-@import './vendors/semantic-ui';
+@import "./vendors/bootstrap";
+@import "./vendors/semantic-ui";

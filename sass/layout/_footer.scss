@@ -1,0 +1,35 @@
+.footer {
+    background-color: $color-black-10;
+    padding: 7.5rem 0 4.8rem;
+    border-bottom: 1px solid $color-white;
+    .footer__top {
+        display: flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-list {
+        display: flex;
+        &__item {
+            list-style: none;
+        }
+        &__link {
+            text-decoration: none;
+        }
+    }
+    .footer__bottom {
+        margin-top: 3.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer-content__text {
+            width: 54rem;
+        }
+        .social-items {
+            display: flex;
+            .social-item {
+                margin-left: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.features {
+    margin-top: 16rem;
+    display: flex;
+    .features-left {
+        margin-right: 12.5rem;
+    }
+    .features-right {
+        display: block;
+        width: 35rem;
+        .features-list__item {
+            margin-left: 0;
+        }
+    }
+    .secondary-text {
+        width: 63.5rem;
+    }
+}

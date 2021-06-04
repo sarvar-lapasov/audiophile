@@ -1,0 +1,29 @@
+.list {
+    display: flex;
+    list-style: none;
+    &__item:not(:first-child) {
+        margin-left: 3.4rem;
+    }
+    &__link {
+        color: $color-white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in;
+        &:hover {
+            color: $color-orange;
+        }
+    }
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    &__item {
+        display: flex;
+        margin-bottom: 8px;
+    }
+}
