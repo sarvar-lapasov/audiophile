@@ -25,6 +25,12 @@ addToCart.addEventListener("click", () => {
 //         modal.style.display = "none";
 //     }
 // };
+
+document
+    .getElementById("open-popup-btn")
+    .addEventListener("click", function() {
+        document.getElementsByClassName("modal2")[0].classList.add("active");
+    });
 $(document).ready(function() {
     $(".content .radio_content").hide();
     $(".content .radio_content:first-child").show();
@@ -35,7 +41,20 @@ $(document).ready(function() {
         $("." + current_raido).show();
     });
 
-    if ($('input[name="radio"]:checked').length > 0) {
-        $("this").parent().children("label").css({ color: "red" });
+    if ($("input[type=radio]:checked").length > 0) {
+        $("input[name='radio']:checked").parent().addClass("selected");
     }
+    $("input[type=radio][name=radio]").change(function() {
+        $("input[name='radio']").parent().removeClass("selected");
+        $("input[name='radio']:checked").parent().addClass("selected");
+    });
+
+    $(".read-more-btn").click(function() {
+        $(this).prev().toggle();
+        if ($(this).text() == "and 2 other item(s)") {
+            $(this).text("view less");
+        } else {
+            $(this).text("and 2 other item(s)");
+        }
+    });
 });

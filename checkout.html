@@ -116,12 +116,66 @@
 
 
         <!-- order modal start -->
-        <div class="modal">
-            <div class="order-modal">
+        <div class="modal2">
+            <div class="order">
                 <img src="./images/order.png" alt="" width="64" height="64" class="order-img">
+                <h4 class="order-text features-heading">THANK YOU <br> FOR YOUR ORDER</h4>
+                <p class="secondary-text talent-text black-text">You will receive an email confirmation shortly.</p>
+
+                <div class="order-cards">
+                    <div class="cart-products">
+                        <div class="cart-product u-space-between">
+                            <div class="product-info">
+                                <div class="product-info__img">
+                                    <img src=".//images/headphone/1.png" width="36" height="40" alt="">
+                                </div>
+                                <div class="u-direction-column">
+                                    <p class="product-info__title">XX99 MK II</p>
+                                    <span class="product-info__price">$ 2,999</span>
+                                </div>
+                            </div>
+                            <p class="product-info__title u-opacity-50">x1</p>
+                        </div>
+                        <div class="read-more-product">
+                            <div class="cart-product u-space-between">
+                                <div class="product-info">
+                                    <div class="product-info__img">
+                                        <img src=".//images/headphone/3.png" width="38" height="40" alt="">
+                                    </div>
+                                    <div class="u-direction-column">
+                                        <p class="product-info__title">XX59</p>
+                                        <span class="product-info__price">$ 899</span>
+                                    </div>
+                                </div>
+                                <p class="product-info__title u-opacity-50">x2</p>
+                            </div>
+                            <div class="cart-product u-space-between">
+                                <div class="product-info">
+                                    <div class="product-info__img">
+                                        <img src=".//images/earphones/1.png" width="36" height="32" alt="">
+                                    </div>
+                                    <div class="u-direction-column">
+                                        <p class="product-info__title">YX1</p>
+                                        <span class="product-info__price">$ 599</span>
+                                    </div>
+                                </div>
+                                <p class="product-info__title u-opacity-50">x1</p>
+                            </div>
+                        </div>
+                        <span class="read-more-btn">and 2 other item(s)</span>
+                    </div>
+                    <div class="order-total">
+                        <span class="product-total order-t">GRAND TOTAL</span>
+                        <span class="price order-total-price u-margin-none">$ 5,446</span>
+                    </div>
+                </div>
+                <a href="index.html" type="button" class="btn u-text-center btn-checkout">BACK TO HOME</a>
             </div>
         </div>
         <!-- order modal end -->
+
+
+
         <div class="container">
             <div class="go-back">
                 <a class="go-back__link" href="#">Go back</a>
@@ -142,7 +196,7 @@
                                 <input class="input" type="email" id="email" name="email" placeholder="alexei@mail.com">
                             </div>
                             <div class="col-50">
-                                <label class="label" for="tel"> Address</label>
+                                <label class="label" for="tel"> Phone Number</label>
                                 <input class="input" type="tel" id="tel" name="tel" placeholder="+1 202-555-0136">
                             </div>
                         </div>
@@ -232,7 +286,7 @@
                                     <img src=".//images/headphone/3.png" width="38" height="40" alt="">
                                 </div>
                                 <div class="u-direction-column">
-                                    <p class="product-info__title">XX99 MK II</p>
+                                    <p class="product-info__title">XX59</p>
                                     <span class="product-info__price">$ 899</span>
                                 </div>
                             </div>
@@ -244,7 +298,7 @@
                                     <img src=".//images/earphones/1.png" width="46" height="42" alt="">
                                 </div>
                                 <div class="u-direction-column">
-                                    <p class="product-info__title">XX99 MK II</p>
+                                    <p class="product-info__title">YX1</p>
                                     <span class="product-info__price">$ 599</span>
                                 </div>
                             </div>
@@ -267,7 +321,8 @@
                         <span class="product-total">GRAND TOTAL</span>
                         <span class="price total-price u-margin-none">$ 5,446</span>
                     </div>
-                    <button type="button" class="btn u-text-center btn-checkout" href="#">CONTINUE & PAY</button>
+                    <button type="button" id="open-popup-btn" class="btn u-text-center btn-checkout">CONTINUE &
+                        PAY</button>
                 </div>
             </div>
 

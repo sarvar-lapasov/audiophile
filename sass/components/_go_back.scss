@@ -2,6 +2,7 @@
     display: flex;
     // margin-top: 7.3rem;
     margin-bottom: 5.6rem;
+    cursor: pointer;
     &__link {
         font-weight: 500;
         font-size: 1.5rem;
@@ -9,5 +10,8 @@
         color: $color-black;
         mix-blend-mode: normal;
         opacity: 0.5;
+        &:hover {
+            color: $color-orange;
+        }
     }
 }

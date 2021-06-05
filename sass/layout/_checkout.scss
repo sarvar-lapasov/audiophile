@@ -3,6 +3,16 @@
     border-radius: 8px;
     padding: 5.4rem 4.8rem 4.8rem 4.8rem;
     width: 73rem;
+    #fname {
+        cursor: pointer;
+        &:focus,
+        &:hover {
+            border-color: $color-orange;
+        }
+    }
+    #email {
+        // border-color: $color-orange;
+    }
     .delivery-input__img {
         margin-right: 3.2rem;
     }
