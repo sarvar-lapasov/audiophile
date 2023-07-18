@@ -1,19 +1,96 @@
 .cards {
     .card {
-        margin-top: 16rem;
+        margin-top: 10rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include respond(tablet-land) {
+            &:nth-child(even) {
+                .card__content {
+                    width: 36rem;
+                    margin-left: 0;
+                    margin-right: 6rem;
+                }
+                .card__img {
+                    width: 38rem;
+                    max-height: 45rem;
+                    img {
+                        width: 30rem;
+                        height: auto;
+                    }
+                }
+            }
+            .card__content {
+                width: 36rem;
+                margin-left: 6rem;
+            }
+            .card__img {
+                width: 38rem;
+                max-height: 45rem;
+                img {
+                    width: 30rem;
+                    height: auto;
+                }
+            }
+        }
+        @include respond(tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .card__content {
+                margin: 0;
+            }
+            .card__img {
+                width: 100%;
+                height: 56rem;
+                margin-bottom: 5rem;
+                img {
+                    width: 20rem;
+                    height: auto;
+                }
+            }
+        }
         &:nth-child(even) {
             flex-direction: row-reverse;
+            @include respond(tablet) {
+                flex-direction: column;
+                .card__content {
+                    margin: 0;
+                }
+                .card__img {
+                    width: 100%;
+                    height: 56rem;
+                    margin-bottom: 5rem;
+                    img {
+                        width: 20rem;
+                        height: auto;
+                    }
+                }
+            }
         }
         &__img {
             width: 54rem;
-            min-height: 56rem;
+            height: 56rem;
             background-color: $color-gray-f1;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        &__content {
+            @include respond(tablet-land) {
+                width: 36rem;
+                margin-left: 6rem;
+            }
+            @include respond(tablet) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 100%;
+            }
+            @include respond(phone) {
+            }
         }
     }
 }

@@ -40,3 +40,9 @@
 .u-opacity-50 {
     opacity: 0.5;
 }
+
+.hidden {
+    visibility: visible;
+    width: 0;
+    height: 0;
+}

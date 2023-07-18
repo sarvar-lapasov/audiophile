@@ -10,4 +10,42 @@
             display: block;
         }
     }
+    @include respond(tablet-land) {
+        margin-top: 10rem;
+        .content-left {
+            .content-left__img {
+                border-radius: 1rem;
+                max-width: 30rem;
+                object-fit: cover;
+            }
+        }
+        .content-left__img {
+            border-radius: 1rem;
+            width: 45rem;
+            object-fit: cover;
+        }
+    }
+    @include respond(tablet) {
+        flex-direction: column;
+        .content-left {
+            flex-direction: row;
+            gap: 2rem;
+            .content-left__img {
+                max-width: 29rem;
+            }
+        }
+        .content-left__img {
+            margin-top: 2rem;
+            width: 100%;
+        }
+    }
+    @include respond(phone) {
+        .content-left {
+            gap: 0;
+            flex-direction: column;
+            .content-left__img {
+                min-width: 100%;
+            }
+        }
+    }
 }

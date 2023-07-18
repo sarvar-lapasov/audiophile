@@ -18,7 +18,7 @@
         border-radius: 8px;
         outline: none;
         &.input-100 {
-            width: 63.4rem;
+            max-width: 100%;
         }
     }
     .input-radio[checked] .label-radio:active {
@@ -72,6 +72,22 @@
                 border-radius: 50%;
                 display: none;
             }
+        }
+    }
+    @include respond(tablet) {
+        .input {
+            width: 23rem;
+        }
+        .label-radio {
+            width: 23rem;
+        }
+    }
+    @include respond(phone) {
+        .input {
+            width: 100%;
+        }
+        .label-radio {
+            width: 100%;
         }
     }
 }

@@ -2,16 +2,34 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20rem;
+    @include respond(tablet-land) {
+        flex-wrap: wrap;
+    }
+    @include respond(tablet) {
+        justify-content: center;
+        .cart {
+            margin-left: auto;
+            margin-right: auto;
+            &:not(:first-child) {
+                margin-top: 10rem;
+            }
+        }
+    }
     .cart {
         display: block;
+        @include respond(tablet-land) {
+            &:last-child {
+                margin-top: 10rem;
+            }
+        }
         &-link {
             display: flex;
             flex-direction: column;
             text-decoration: none;
             text-align: center;
-            width: 35rem;
             background-color: $color-gray-f1;
             position: relative;
+            width: 35rem;
             padding: 11.6rem 0 3rem 0;
             transition: all 0.2s ease-in;
             &__img {
@@ -52,6 +70,13 @@
             &:hover .cart-link__text {
                 color: $color-orange;
                 opacity: 1;
+            }
+        }
+    }
+    @include respond(small-phone) {
+        .cart {
+            &-link {
+                width: 32rem;
             }
         }
     }

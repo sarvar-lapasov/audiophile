@@ -1,17 +1,44 @@
 .features {
     margin-top: 16rem;
     display: flex;
-    .features-left {
+    justify-content: space-between;
+    &-left {
         margin-right: 12.5rem;
     }
-    .features-right {
+    &-right {
         display: block;
-        width: 35rem;
-        .features-list__item {
-            margin-left: 0;
+        width: 100%;
+        .features-list {
+            .features-list__item {
+                margin-left: 0;
+                .secondary-text {
+                    width: 100%;
+                }
+            }
         }
     }
     .secondary-text {
         width: 63.5rem;
+    }
+    @include respond(tablet-land) {
+        width: 100%;
+        &-left {
+            width: 100%;
+            max-width: 45rem;
+            .secondary-text {
+                display: inline-block;
+                max-width: 100%;
+                margin-top: 0;
+            }
+        }
+        &-right {
+            max-width: 35rem;
+            .secondary-text {
+                width: 100%;
+            }
+        }
+    }
+    @include respond(tablet) {
+        flex-direction: column;
     }
 }

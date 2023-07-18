@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../sass/vendors/semantic-ui.scss"
-    ],
-    "names": [],
-    "file": "semantic-ui.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"semantic-ui.css"}

@@ -1,17 +1,38 @@
 .talent {
-    background-image: url(../images/headphone.png);
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
-    background-color: #141414;
+    background-color: $color-black-10;
     .talent-info {
-        // background-image: url(../../images/headphone.png);
-        // border-top: 1px solid $color-white;
+        background-image: url(../images/headphone/1.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: right 10rem;
+        background-position: center right -8%;
+        display: flex;
         padding-top: calc(12.8rem + 9.6rem);
         padding-bottom: 15.8rem;
+        @include respond(tablet-land) {
+            background-size: contain;
+            background-position: center;
+            text-align: center;
+            .container {
+                text-align: center;
+            }
+        }
+        .talent-bottom {
+            @include respond(tablet) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+        @include respond(tablet) {
+            text-align: center;
+            background-position: center;
+            padding-top: 12.6rem;
+            padding-bottom: 16.7rem;
+        }
     }
     .header {
         background-color: #0e0e0e;
@@ -24,6 +45,7 @@
     background-color: $color-orange;
     background-image: url(../images/main/circle.png);
     background-size: contain;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: 94.4rem;
     margin-top: 16.8rem;
@@ -33,16 +55,46 @@
     position: relative;
     overflow: hidden;
     padding-top: 13.3rem;
+    @include respond(tablet-land) {
+        background-image: url(../images/tablet/zx-9_bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        min-height: 72rem;
+        padding-top: 5.2rem;
+        padding-bottom: 6.4rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
     &__img {
         position: relative;
         bottom: -3rem;
         left: 12rem;
+        @include respond(tablet-land) {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 20rem;
+            height: 23.7rem;
+        }
     }
     .content {
         margin-right: 9.5rem;
         display: block;
         padding-top: 5.3rem;
         // padding-left: 35rem;
+        @include respond(tablet-land) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
     }
 }
 
@@ -57,28 +109,106 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10.1rem 0 10.1rem 9.6rem;
+    @include respond(phone) {
+        background-position: right -6rem bottom;
+        text-align: left;
+        padding-left: 4rem;
+        .secondary-heading {
+            width: 20rem;
+        }
+    }
 }
 
 .yx1 {
     margin-top: 4.8rem;
     display: flex;
     justify-content: space-between;
+    @include respond(tablet-land) {
+        flex-direction: column;
+    }
+    .picture {
+        @include respond(tablet) {
+            width: 34rem;
+            height: 32rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    }
     .yx1-left {
-        display: inline-block;
-        min-width: 54rem;
+        display: block;
+        width: 54rem;
         border-radius: 8px;
         background-color: $color-gray-f1;
         padding: 10.1rem 0 10.1rem 9.6rem;
+        @include respond(tablet-land) {
+            width: 100%;
+            height: 32rem;
+            padding-top: 10rem;
+            padding-left: 4rem;
+            margin-right: 0;
+            margin-top: 1.5rem;
+        }
+        @include respond(tablet) {
+            padding-top: 10rem;
+            padding-left: 4rem;
+            margin-right: 0;
+        }
     }
 }
 
 .person {
     width: 100%;
-    margin-top: 20rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include respond(tablet-land) {
+        margin-top: 15rem;
+        &-img {
+            width: 42rem;
+            .person__img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @include respond(tablet) {
+        margin-top: 10rem;
+        &-img {
+            width: 100%;
+        }
+    }
+    @include respond(phone) {
+        &-img {
+            max-width: 100%;
+        }
+    }
+    @include respond(tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .person-text {
-        min-width: 45rem;
+        width: 45rem;
+        @include respond(tablet-land) {
+            display: block;
+            width: 30rem;
+            .primary-heading {
+                width: 100%;
+            }
+            .secondary-text {
+                width: 100%;
+            }
+        }
+        @include respond(tablet) {
+            width: 100%;
+            margin-top: 6rem;
+            text-align: center;
+            .primary-heading {
+                width: 100%;
+            }
+            .secondary-text {
+                width: 100%;
+            }
+        }
     }
 }

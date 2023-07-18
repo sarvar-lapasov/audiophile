@@ -20,5 +20,31 @@
                 border-radius: 8px;
             }
         }
+        @include respond(tablet-land) {
+            flex-wrap: wrap;
+            .product-card {
+                &:last-child {
+                    margin-top: 10rem;
+                }
+            }
+        }
+        @include respond(tablet) {
+            flex-direction: column;
+            align-items: center;
+            .product-card:not(:first-child) {
+                margin-top: 10rem;
+            }
+            &__img {
+                width: 32rem;
+            }
+        }
+        @include respond(phone) {
+            .product-card {
+                width: 32rem;
+                &__img {
+                    max-width: 32rem;
+                }
+            }
+        }
     }
 }

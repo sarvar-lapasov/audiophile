@@ -4,11 +4,12 @@
     font-family: "Manrope";
     font-style: normal;
     font-weight: 400;
-    src: local(""), url("../fonts/manrope-v4-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("../fonts/manrope-v4-latin-regular.woff") format("woff");
+    src: local(""),
+        url("../fonts/manrope-v4-latin-regular.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../fonts/manrope-v4-latin-regular.woff") format("woff");
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 
 /* manrope-500 - latin */
 
@@ -16,11 +17,11 @@
     font-family: "Manrope";
     font-style: normal;
     font-weight: 500;
-    src: local(""), url("../fonts/manrope-v4-latin-500.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("../fonts/manrope-v4-latin-500.woff") format("woff");
+    src: local(""), url("../fonts/manrope-v4-latin-500.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../fonts/manrope-v4-latin-500.woff") format("woff");
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 
 /* manrope-700 - latin */
 
@@ -28,8 +29,9 @@
     font-family: "Manrope";
     font-style: normal;
     font-weight: 700;
-    src: local(""), url("../fonts/manrope-v4-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("../fonts/manrope-v4-latin-700.woff") format("woff");
+    src: local(""), url("../fonts/manrope-v4-latin-700.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../fonts/manrope-v4-latin-700.woff") format("woff");
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -63,6 +65,19 @@ html {
     color: $color-white;
     width: 40rem;
     margin: 0;
+    @include respond(tablet-land) {
+        width: 50%;
+        margin: 0 auto;
+    }
+    @include respond(tablet) {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include respond(small-phone) {
+        font-size: 4rem;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 .secondary-text {
@@ -71,14 +86,21 @@ html {
     line-height: 2.5rem;
     color: $color-white;
     mix-blend-mode: normal;
-    opacity: 0.75;
     width: 35rem;
     margin-top: 2.4rem;
     margin-bottom: 4rem;
+    @include respond(tablet-land) {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     &.black-text {
         color: $color-black;
         mix-blend-mode: normal;
         opacity: 0.5;
+        @include respond(tablet-land) {
+            width: 100%;
+        }
     }
     &.detail {
         margin-bottom: 0;
@@ -128,7 +150,7 @@ html {
 
 .primary-heading {
     display: inline-block;
-    width: 45rem;
+    width: 40rem;
     font-weight: bold;
     font-size: 40px;
     line-height: 44px;
@@ -141,16 +163,25 @@ html {
     &.white {
         color: $color-white;
     }
+    @include respond(tablet) {
+        width: 100%;
+        &.white {
+            width: 100%;
+        }
+    }
 }
 
 .footer-content__span {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: block;
     font-weight: bold;
     font-size: 15px;
     line-height: 25px;
     color: $color-white;
     mix-blend-mode: normal;
-    opacity: 0.5;
     margin-top: 5.6rem;
 }
 
@@ -170,6 +201,7 @@ html {
 }
 
 .features-heading {
+    width: 100%;
     font-weight: bold;
     font-size: 3.2rem;
     line-height: 36px;

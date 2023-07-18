@@ -19,6 +19,11 @@
                         <img class="logo__img" src="./images/logo.svg" width="143" height="25" alt="">
                     </a>
                     <nav class="nav header-nav">
+                        <div class="menu_btn">
+                            <span class="menu menu-1"></span>
+                            <span class="menu menu-2"></span>
+                            <span class="menu menu-3"></span>
+                        </div>
                         <ul class="list header-list">
                             <li class="list__item header-list__item">
                                 <a href="index.html" class="list__link header-list__link">HOME</a>
@@ -36,7 +41,10 @@
 
                         </ul>
                     </nav>
-                    <button class="btn-btn add-t-c" type="button"></button>
+                    <button class="btn-btn add-t-c" type="button">
+                        <span class="p-count">
+                        </span>
+                    </button>
                 </div>
 
             </header>
@@ -47,6 +55,23 @@
                 <h2 class="primary-heading white u-text-center">Headphones</h2>
             </div>
         </div>
+        <!-- modal cart start -->
+        <div class="modal">
+            <div class="cart-modal js-cart">
+                <div class="u-space-between">
+                    <h5 class="cart-modal__heading">cart <span></span></h5>
+                    <span class="cart-modal__remove">Remove all</span>
+                </div>
+                <div class="cart-products">
+                </div>
+                <div class="cart-product-price u-space-between">
+                    <span class="product-total">TOTAL</span>
+                    <span class="price total-price"></span>
+                </div>
+                <a class="btn btn-checkout u-text-center" href="./checkout.html">checkout</a>
+            </div>
+        </div>
+        <!-- modal cart end -->
     </section>
     <main class="main">
         <div class="container">
@@ -61,7 +86,7 @@
                         </h2>
                         <p class="secondary-text black-text">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
                         </p>
-                        <a class="btn u-text-center talent-btn" href="headphones1.html">See Product</a>
+                        <a class="btn u-text-center talent-btn" href="./headphones1.html">See Product</a>
                     </div>
                 </div>
                 <div class="card">
@@ -73,7 +98,7 @@
                         </h2>
                         <p class="secondary-text black-text">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
                         </p>
-                        <a class="btn u-text-center talent-btn" href="headphones2.html">See Product</a>
+                        <a class="btn u-text-center talent-btn" href="./headphones2.html">See Product</a>
                     </div>
                 </div>
                 <div class="card">
@@ -85,27 +110,27 @@
                         </h2>
                         <p class="secondary-text black-text">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
                         </p>
-                        <a class="btn u-text-center talent-btn" href="headphones3.html">See Product</a>
+                        <a class="btn u-text-center talent-btn" href="./headphones3.html">See Product</a>
                     </div>
                 </div>
             </div>
             <div class="shop-cart">
                 <div class="cart">
-                    <a class="cart-link" href="#">
+                    <a class="cart-link" href="./headphones.html">
                         <img class="cart-link__img" src="./images/shop/headphone.png" width="122px" height="160px" alt="headphone">
                         <h6 class="cart-link__title">HEADPHONES</h6>
                         <span class="cart-link__text">Shop</span>
                     </a>
                 </div>
                 <div class="cart">
-                    <a class="cart-link" href="#">
+                    <a class="cart-link" href="./speakers.html">
                         <img class="cart-link__img" src="./images/shop/speaker.png" width="122px " height="146px" alt="speaker">
                         <h6 class="cart-link__title">SPEAKERS</h6>
                         <span class="cart-link__text">Shop</span>
                     </a>
                 </div>
                 <div class="cart">
-                    <a class="cart-link" href="#">
+                    <a class="cart-link" href="./earphones.html">
                         <img class="cart-link__img" src="./images/shop/earphones.png" width="125px" height="125px" alt="earphones">
                         <h6 class="cart-link__title">EARPHONES</h6>
                         <span class="cart-link__text">Shop</span>
@@ -119,75 +144,12 @@
                     <p class="secondary-text black-text">Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience
                         a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.</p>
                 </div>
-                <img src="./images/main/person.png" width="540" height="588" alt="" class="person__img">
+                <div class="person-img">
+                    <img src="./images/main/person.png" width="540" height="588" alt="" class="person__img">
+                </div>
             </div>
         </div>
-        <!-- modal cart start -->
-        <div class="modal">
-            <div class="cart-modal js-cart">
-                <div class="u-space-between">
-                    <h5 class="cart-modal__heading">cart (3)</h5>
-                    <span class="cart-modal__remove">Remove all</span>
-                </div>
-                <div class="cart-products">
-                    <div class="cart-product u-space-between">
-                        <div class="product-info">
-                            <div class="product-info__img">
-                                <img src=".//images/headphone/1.png" width="36" height="40" alt="">
-                            </div>
-                            <div class="u-direction-column">
-                                <p class="product-info__title">XX99 MK II</p>
-                                <span class="product-info__price">$ 2,999</span>
-                            </div>
-                        </div>
-                        <div class="quantity quantity-product">
-                            <button class=" btn-quantity minus-btn disabled" type="button">-</button>
-                            <input type="text" class="quantity__input" name="" id="quantity" value="0">
-                            <button class="btn-quantity plus-btn" type="button">+</button>
-                        </div>
-                    </div>
-                    <div class="cart-product u-space-between">
-                        <div class="product-info">
-                            <div class="product-info__img">
-                                <img src=".//images/headphone/3.png" width="38" height="40" alt="">
-                            </div>
-                            <div class="u-direction-column">
-                                <p class="product-info__title">XX99 MK II</p>
-                                <span class="product-info__price">$ 2,999</span>
-                            </div>
-                        </div>
-                        <div class="quantity quantity-product">
-                            <button class=" btn-quantity minus-btn disabled" type="button">-</button>
-                            <input type="text" class="quantity__input" name="" id="quantity" value="0">
-                            <button class="btn-quantity plus-btn" type="button">+</button>
-                        </div>
-                    </div>
-                    <div class="cart-product u-space-between">
-                        <div class="product-info">
-                            <div class="product-info__img">
-                                <img src=".//images/earphones/1.png" width="46" height="42" alt="">
-                            </div>
-                            <div class="u-direction-column">
-                                <p class="product-info__title">XX99 MK II</p>
-                                <span class="product-info__price">$ 2,999</span>
-                            </div>
-                        </div>
-                        <div class="quantity quantity-product">
-                            <button class=" btn-quantity minus-btn disabled" type="button">-</button>
-                            <input type="text" class="quantity__input" name="" id="quantity" value="0">
-                            <button class="btn-quantity plus-btn" type="button">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-product-price u-space-between">
-                    <span class="product-total">TOTAL</span>
-                    <span class="price total-price">$ 5,396</span>
-                </div>
-                <a class="btn btn-checkout u-text-center" href="checkout.html">checkout</a>
-            </div>
 
-        </div>
-        <!-- modal cart end -->
     </main>
     <footer class="footer">
         <div class="container">

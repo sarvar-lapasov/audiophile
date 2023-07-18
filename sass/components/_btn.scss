@@ -4,7 +4,7 @@
     font-size: 1.4rem;
     line-height: 2.5rem;
     padding: 1.5rem 3rem;
-    border: 3px solid transparent;
+    border: 1px solid transparent;
     outline: none;
     color: $color-white;
     cursor: pointer;
@@ -13,8 +13,12 @@
     transition: all 0.2s ease-in;
     &.btn-black {
         background-color: $color-black;
+        box-sizing: border-box;
         &:hover {
-            background-color: #4c4c4c;
+            border: 1px solid $color-black;
+            background-color: transparent;
+            color: $color-black;
+            box-sizing: border-box;
         }
     }
     &.btn-transparent {
@@ -33,16 +37,49 @@
 }
 
 .btn-btn {
-    width: 2.3rem;
-    height: 2rem;
+    position: relative;
+    top: 0;
+    right: 0.7rem;
+    width: 4rem;
+    height: 2.5rem;
     border: none;
     background: none;
     background-image: url(../images/cart.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: unset;
+    background-position: center center;
     outline: none;
     cursor: pointer;
     transition: all 0.2s ease-in;
+    span {
+        position: absolute;
+        top: -1.2rem;
+        right: -0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        color: $color-white;
+        width: 2rem;
+        height: 2rem;
+        background-color: $color-orange;
+        border-radius: 50%;
+        z-index: 2;
+    }
+    &:active {
+        transform: scale(1.1);
+    }
+    @include respond(tablet-land) {
+        right: 0.5rem;
+    }
+    @include respond(tablet) {
+        margin-right: 6rem;
+    }
+    @include respond(phone) {
+        span {
+            right: -1rem;
+        }
+    }
 }
 
 .btn-quantity {
@@ -50,7 +87,7 @@
     height: 1.6rem;
     border: none;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 2.1rem;
     line-height: 1.8rem;
     text-align: center;
     letter-spacing: 1px;
@@ -67,4 +104,57 @@
 
 .btn-checkout {
     width: 100%;
+    // margin-top: 2rem;
+}
+
+.close-check {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid $color-black;
+    outline: none;
+    cursor: pointer;
+}
+
+/* _________________ */
+
+.menu_btn {
+    display: none;
+    @include respond(tablet) {
+        position: fixed;
+        width: 24px;
+        height: 11px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        top: 8px;
+        right: 0;
+        z-index: 999;
+        .menu {
+            width: 100%;
+            height: 1px;
+            background: $color-white;
+            transition: all 1s ease-in-out;
+            .change &.menu-1 {
+                transform: rotateZ(-405deg) translate(-4px, 3px);
+            }
+            .change &.menu-2 {
+                opacity: 0;
+            }
+            .change &.menu-3 {
+                transform: rotateZ(405deg) translate(-4px, -3px);
+            }
+        }
+    }
 }
