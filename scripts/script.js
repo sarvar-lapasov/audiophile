@@ -148,20 +148,31 @@ checkout();
 function buyProduct(e) {
     const product = e.target.closest(".card");
     if (e.target.classList.contains("add-t-c")) {
-        const productInfo = {
-            img: product.querySelector("img").src,
-            title: product.querySelector("h2").textContent,
-            price: product
-                .querySelector(".price")
-                .textContent.replace(",", "")
-                .replace("$", "")
-                .trim(),
-            id: product.querySelector("a").getAttribute("data-id"),
-            count: 1,
-        };
+        const productId = product.querySelector("a").getAttribute("data-id");
+        if (isProductInCart(productId)) {
+            // Display a warning that the product is already in the cart
+            alert("This product is already in the cart!");
+        } else {
+            const productInfo = {
+                img: product.querySelector("img").src,
+                title: product.querySelector("h2").textContent,
+                price: product
+                    .querySelector(".price")
+                    .textContent.replace(",", "")
+                    .replace("$", "")
+                    .trim(),
+                id: productId,
+                count: 1,
+            };
 
-        addIntoCart(productInfo);
+            addIntoCart(productInfo);
+        }
     }
+}
+
+function isProductInCart(productId) {
+    const products = getProductsFromStorage();
+    return products.some((product) => product.id === productId);
 }
 
 function addIntoCart(product) {
@@ -269,11 +280,11 @@ function clearLocalStorage() {
     count(products);
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
     $(".content .radio_content").hide();
     $(".content .radio_content:first-child").show();
 
-    $(".label-radio").click(function () {
+    $(".label-radio").click(function() {
         var current_raido = $(this).attr("data-radio");
         $(".content .radio_content").hide();
         $("." + current_raido).show();
@@ -282,12 +293,12 @@ $(document).ready(function () {
     if ($("input[type=radio]:checked").length > 0) {
         $("input[name='radio']:checked").parent().addClass("selected");
     }
-    $("input[type=radio][name=radio]").change(function () {
+    $("input[type=radio][name=radio]").change(function() {
         $("input[name='radio']").parent().removeClass("selected");
         $("input[name='radio']:checked").parent().addClass("selected");
     });
 
-    $(".read-more-btn").click(function () {
+    $(".read-more-btn").click(function() {
         $(this).prev().toggle();
         if ($(this).text() == "and 2 other item(s)") {
             $(this).text("view less");
